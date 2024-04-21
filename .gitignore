@@ -9,11 +9,11 @@ exp/
 BundleTrack/build
 # Distribution / packaging
 .Python
-foundationpose/
-build/
+**/foundationpose/
+**/build/
 develop-eggs/
 *.zip
-demo_data/*
+**/demo_data/*
 dist/
 # *.png
 # *.jpg
@@ -45,7 +45,8 @@ MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+#  
+before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -61,13 +62,13 @@ htmlcov/
 .coverage.*
 .cache
 nosetests.xml
-demo_data/
+**/demo_data/
 debug/
 coverage.xml
 *.cover
-demo_data/
+**/demo_data/
 debug/
-weights/
+**/weights/
 *.py,cover
 .hypothesis/
 .pytest_cache/

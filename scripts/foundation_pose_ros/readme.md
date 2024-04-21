@@ -67,9 +67,9 @@ year          = {2023},
 
 # Env setup option 1: docker (recommended)
   ```
-  cd docker/
-  docker pull wenbowen123/foundationpose && docker tag wenbowen123/foundationpose foundationpose  # Or to build from scratch: docker build --network host -t foundationpose .
-  bash docker/run_container.sh
+  docker build --build-arg locale=Pacific/Auckland --build-arg base_ros_img=wenbowen123/foundationpose --build-arg username=$USER --build-arg uid=$UID --build-arg gid=$(id -g ${USER}) --build-arg videoid=$(getent group video | awk -F: '{printf "%d", $3}') --build-arg audioid=$(getent group audio | awk -F: '{printf "%d", $3}') --build-arg uucpid=$(getent group uucp | awk -F: '{printf "%d", $3}') -t foundationpose_ros -f Dockerfile_Noetic .
+
+  docker build -t foundationpose_ros_noetic -f Dockerfile .
   ```
 
 
@@ -78,11 +78,7 @@ If it's the first time you launch the container, you need to build extensions.
 bash build_all.sh
 ```
 
-Later you can execute into the container without re-build.
-```
-docker exec -it foundationpose bash
-```
-For more recent GPU such as 4090, refer to [this](https://github.com/NVlabs/FoundationPose/issues/27).
+Model needs to be run as root inside the container
 
 # Env setup option 2: conda (experimental)
 
