@@ -14,7 +14,7 @@ RUN curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | apt
 # ROS
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ros-noetic-ros-base \
-    ros-noetic-tf2 \
+    ros-noetic-tf2-ros \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mv /etc/sudoers.bkp /etc/sudoers

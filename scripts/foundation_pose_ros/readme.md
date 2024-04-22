@@ -75,7 +75,7 @@ year          = {2023},
 
 If it's the first time you launch the container, you need to build extensions.
 ```
-bash build_all.sh
+  bash build_all.sh
 ```
 
 Model needs to be run as root inside the container
