@@ -68,6 +68,22 @@ if __name__ == "__main__":
         depth = reader.get_depth(i)
         if i == 0:
             mask = reader.get_mask(0).astype(bool)
+            print(type(mask))
+            print(mask.shape)
+            print(mask.max())
+            print(mask.min())
+            print(mask.dtype)
+            print(type(color))
+            print(color.shape)
+            print(color.max())
+            print(color.min())
+            print(color.dtype)
+            print(type(depth))
+            print(depth.shape)
+            print(depth.max())
+            print(depth.min())
+            print(depth.dtype)
+            quit()
             pose = est.register(
                 K=reader.K,
                 rgb=color,

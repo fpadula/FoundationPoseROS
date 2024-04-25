@@ -1,0 +1,3 @@
+[submodule "scripts/foundation_pose_ros/cnos"]
+	path = scripts/foundation_pose_ros/cnos
+	url = https://github.com/nv-nguyen/cnos.git
